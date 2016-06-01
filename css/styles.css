@@ -1,0 +1,7 @@
+.modalBodyHeader {
+	font-weight: emphasis;
+}
+
+img, embed, obj, video {
+	max-width: 100%;
+}

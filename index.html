@@ -1,0 +1,262 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Portfolio</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <svg version="1.1" class="logo" id="headerlogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 64" xml:space="preserve">
+          <g>
+            <polyline fill="maroon" stroke="#000000" stroke-width="1" stroke-linejoin="round" stroke-miterlimit="10" points="600,15 799,32 600,49"/>
+          </g>
+          <g>
+            <polyline fill="maroon" stroke="#000000" stroke-width="1" stroke-linejoin="round" stroke-miterlimit="10" points="200,48.935 1,31.935 200,14.935"/>
+          </g>
+            <ellipse fill="lightgreen" stroke="#000000" stroke-width="1" stroke-linejoin="bevel" stroke-miterlimit="10" cx="400" cy="32" rx="300" ry="16"/>
+            <circle fill="darkorchid" stroke="#000000" stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" cx="400" cy="32" r="6"/>
+          </svg>
+        </div>
+        <div class="col-xs-8 text-right text-uppercase">
+          Ryan Connor
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12"><img class="img-responsive" src="http://placehold.it/1140x350"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12"><h2>Featured Work</h2></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-4">
+          <img class="img-responsive" data-toggle="modal" data-target="#restaurantmodal" src="http://placehold.it/555x300">
+          <h3>Restaurant Manager</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <img class="img-responsive" data-toggle="modal" data-target="#stackoverflowmodal" src="http://placehold.it/555x300">
+          <h3>Stack Overflow API and Analysis</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <img class="img-responsive" data-toggle="modal" data-target="#portmodal" src="http://placehold.it/555x300">
+          <h3>Port Scheduler</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-4">
+          <img class="img-responsive" data-toggle="modal" data-target="#swisstournamentmodal" src="http://placehold.it/555x300">
+          <h3>Swiss Tournament Manager</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <img class="img-responsive" data-toggle="modal" data-target="#routemodal" src="http://placehold.it/555x300">
+          <h3>Route Planner</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <img class="img-responsive" data-toggle="modal" data-target="#digitrecognitionmodal" src="http://placehold.it/555x300">
+          <h3>Neural Network Digit Recognition</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-4">
+          <img class="img-responsive" data-toggle="modal" data-target="#puppymodal" src="http://placehold.it/555x300">
+          <h3>Puppy Adopter</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <img class="img-responsive" data-toggle="modal" data-target="#coolmodal" src="http://placehold.it/555x300">
+          <h3>Cool Compiler</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <img class="img-responsive" data-toggle="modal" data-target="#watermodal" src="http://placehold.it/555x300">
+          <h3>Water Finder</h3>
+          <p><a href="http://github.com">Link to project</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modals (opportunity to pass list of modal info and use for loop when migrate to hosted site)-->
+    <div class="modal fade" id="restaurantmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="">Restaurant Manager</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="http://placehold.it/555x300">
+            <p class="text-center"><strong>Summary</strong></p>
+            <p>An interactive website with social signin (Google and Facebook) that helps restaurant staff and owners manage restaurants and their menus.  Users can view, create, edit, and delete cuisines, cuisine "base menu items", restaurants, and restaurant menu items, as well as view other users' profiles.</p>
+            <p class="text-center"><strong>Technical Details</strong></p>
+            <p>Written in Python (using Flask) on the backend and HTML/CSS/JavaScript on the frontend, with a SQLite database.  Performs server-side and both real-time and on-submit client-side form validation, uses Flask blueprints to improve modularization, and provides a wholly-Python data access object to separate database implementation from server programming.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="stackoverflowmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="">Stack Overflow API and Analysis</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="http://placehold.it/555x300">
+            <p class="text-center"><strong>Summary</strong></p>
+            <p>[to come]</p>
+            <p class="text-center"><strong>Technical Details</strong></p>
+            <p>[to come]</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="portmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="">Port Scheduler</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="http://placehold.it/555x300">
+            <p class="text-center"><strong>Summary</strong></p>
+            <p>[to come]</p>
+            <p class="text-center"><strong>Technical Details</strong></p>
+            <p>[to come]</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="swisstournamentmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="">Swiss Tournament Manager</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="http://placehold.it/555x300">
+            <p class="text-center"><strong>Summary</strong></p>
+            <p>[to come]</p>
+            <p class="text-center"><strong>Technical Details</strong></p>
+            <p>[to come]</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="routemodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="">Route Planner</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="http://placehold.it/555x300">
+            <p class="text-center"><strong>Summary</strong></p>
+            <p>[to come]</p>
+            <p class="text-center"><strong>Technical Details</strong></p>
+            <p>[to come]</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="digitrecognitionmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="">Neural Network Digit Recognition
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="http://placehold.it/555x300">
+            <p class="text-center"><strong>Summary</strong></p>
+            <p>[to come]</p>
+            <p class="text-center"><strong>Technical Details</strong></p>
+            <p>[to come]</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="puppymodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="">Puppy Adopter</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="http://placehold.it/555x300">
+            <p class="text-center"><strong>Summary</strong></p>
+            <p>[to come]</p>
+            <p class="text-center"><strong>Technical Details</strong></p>
+            <p>[to come]</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="coolmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="">Cool Compiler</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="http://placehold.it/555x300">
+            <p class="text-center"><strong>Summary</strong></p>
+            <p>[to come]</p>
+            <p class="text-center"><strong>Technical Details</strong></p>
+            <p>[to come]</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="watermodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="">Water Finder</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="http://placehold.it/555x300">
+            <p class="text-center"><strong>Summary</strong></p>
+            <p>[to come]</p>
+            <p class="text-center"><strong>Technical Details</strong></p>
+            <p>[to come]</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
