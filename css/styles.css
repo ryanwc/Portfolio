@@ -5,3 +5,59 @@
 img, embed, obj, video {
 	max-width: 100%;
 }
+
+#logo {
+	max-width: 300px;
+}
+
+.headercol h1 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: "Philosopher";
+}
+
+.headercol p {
+	margin-bottom: 0px;
+	font-family: "Philosopher";
+}
+
+@media screen and (max-width: 450px) {
+	.container {
+		font-size: 80%;
+	}
+
+	h1 {
+		font-size: 200%;
+	}
+
+	h2 {
+		font-size: 175%;
+	}
+
+	h3 {
+		font-size: 150%;
+	}
+
+	h4 {
+		font-size: 125%;
+	}
+}
+
+@media screen and (min-width: 601px) {
+	.headercol h1 {
+		margin-top: 15px;
+		font-size: 350%;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.headercol h1 {
+		margin-top: 25px;
+		font-size: 450%;
+	}
+
+	.headercol p {
+
+		font-size: 150%;
+	}
+}
