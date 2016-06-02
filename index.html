@@ -15,26 +15,9 @@
 
       <header class="row">
         <div class="col-xs-4 headercol">
-          <svg id="logo" viewBox="0 15 100 70">
-            <g>
-              <polyline class="triangle" points="75,25 99,50 75,75"/>
-            </g>
-            <g>
-              <polyline class="triangle" points="25,75 1,50 25,25"/>
-            </g>
-            <defs>        
-              <linearGradient id="pillgrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop id="leftgrad" offset="0%"/>
-                <stop id="middlegrad1" offset="33.3%"/>
-                <stop id="middlegrad2" offset="66.6%"/>
-                <stop id="rightgrad" offset="100%"/>
-              </linearGradient>
-            </defs>
-            <!-- included fill in-line to be able to access the above gradient -->
-            <ellipse fill="url(#pillgrad)" cx="50" cy="50" rx="40" ry="25"/>
-            <!-- included font-size in-line because it is part of the graphic and, declared here, will load and scale responsively with the graphic, but will not do so properly if declared in CSS. consider it as if the text is made of polylines and the font-size is just a property of the set of points that make up those polylines -->
-            <text font-size="20" x="36" y="54">rwc</text>
-          </svg>
+          <object id="logo" type="image/svg+xml" data="images/rwc-logo.svg">
+            [.svg logo]
+          </object>
         </div>
         <div class="col-xs-8 headercol text-right">
           <h1 class="text-uppercase">Ryan Connor</h1>
