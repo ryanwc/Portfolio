@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -10,26 +10,30 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+    <!-- start bootstrap container -->
     <div class="container">
-      <div class="row" id="headerrow">
+
+      <header class="row">
         <div class="col-xs-4 headercol">
           <svg id="logo" viewBox="0 15 100 70">
             <g>
-              <polyline fill="black" stroke="#000000" stroke-width="0" stroke-linejoin="round" stroke-miterlimit="10" points="75,25 99,50 75,75"/>
+              <polyline class="triangle" points="75,25 99,50 75,75"/>
             </g>
             <g>
-              <polyline fill="black" stroke="#000000" stroke-width="0" stroke-linejoin="round" stroke-miterlimit="10" points="25,75 1,50 25,25"/>
+              <polyline class="triangle" points="25,75 1,50 25,25"/>
             </g>
             <defs>        
               <linearGradient id="pillgrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:rgb(250,0,0);stop-opacity:1" />
-                <stop offset="33.3%" style="stop-color:rgb(255,0,255);stop-opacity:1" />
-                <stop offset="66.6%" style="stop-color:rgb(255,0,255);stop-opacity:1" />
-                <stop offset="100%" style="stop-color:rgb(0,255,255);stop-opacity:1" />
+                <stop id="leftgrad" offset="0%"/>
+                <stop id="middlegrad1" offset="33.3%"/>
+                <stop id="middlegrad2" offset="66.6%"/>
+                <stop id="rightgrad" offset="100%"/>
               </linearGradient>
             </defs>
-            <ellipse fill="url(#pillgrad)" stroke="#000000" stroke-width="0" stroke-linejoin="bevel" stroke-miterlimit="10" cx="50" cy="50" rx="40" ry="25"/>
-            <text fill="#ffffff" font-size="20" font-family="Garamond" x="36" y="54">rwc</text>
+            <!-- included fill in-line to be able to access the above gradient -->
+            <ellipse fill="url(#pillgrad)" cx="50" cy="50" rx="40" ry="25"/>
+            <!-- included font-size in-line because it is part of the graphic and, declared here, will load and scale responsively with the graphic, but will not do so properly if declared in CSS. consider it as if the text is made of polylines and the font-size is just a property of the set of points that make up those polylines -->
+            <text font-size="20" x="36" y="54">rwc</text>
           </svg>
         </div>
         <div class="col-xs-8 headercol text-right">
@@ -37,258 +41,285 @@
           <p class="text-uppercase">Software Developer</p>
           <span id="sociallinks"><a href="https://www.linkedin.com/in/ryan-connor-4684a62b">LinkedIn profile</a> | <a href="https://github.com/ryanwc">Github account</a> | <a href="mailto:ryanwc13@gmail.com">Email</a></span>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12" id="topbanner">
-          <picture class="img-responsive" id="topbannerimg">
-            <source media="(min-width: 500px)" srcset="images/port_sMore_large.png">
-            <img src="images/port_sLess_small.png" alt="picture of code">
-          </picture>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12"><h2 class="headerseparator">Featured Work</h2></div>
-      </div>
-      <div class="row flexrow">
-        <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
-          <img class="img-responsive projectimg" data-toggle="modal" data-target="#restaurantmodal" src="images/restaurant_s_small.png" alt="restaurant manager thumbnail">
-          <h3>Restaurant Manager</h3>
-          <p><a href="https://github.com/ryanwc/RestaurantManager">View on Github</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
-          <img class="img-responsive projectimg" data-toggle="modal" data-target="#stackexchangemodal" src="images/stack_s_small.png" alt="stack exhange API thumbnail">
-          <h3>Stack Exchange API and Analysis</h3>
-          <p><a href="https://github.com/ryanwc/SocialNetworks">View on Github</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
-          <img class="img-responsive projectimg" data-toggle="modal" data-target="#portmodal" src="images/port_sLess_small.png" alt="port scheduler thumbnail">
-          <h3>Port Scheduler</h3>
-          <p><a href="https://github.com/ryanwc/PortScheduling">View on Github</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
-          <img class="img-responsive projectimg" data-toggle="modal" data-target="#swisstournamentmodal" src="images/swiss_b_small.jpg" alt="swiss tournament manager thumbnail">
-          <h3>Swiss Tournament Manager</h3>
-          <p><a href="https://github.com/ryanwc/SwissTournament">View on Github</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
-          <img class="img-responsive projectimg" data-toggle="modal" data-target="#routemodal" src="images/pathing_s_small.png" alt="routing application thumbnail">
-          <h3>Route Planner</h3>
-          <p><a href="https://github.com/ryanwc/GraphSearch">View on Github</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
-          <img class="img-responsive projectimg" data-toggle="modal" data-target="#digitrecognitionmodal" src="images/network_s.png" alt="neural network thumbnail">
-          <h3>Neural Networks: Digit Recognition</h3>
-          <p><a href="https://github.com/ryanwc/NeuralNetworkDigitRecognition">View on Github</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
-          <img class="img-responsive projectimg" data-toggle="modal" data-target="#puppymodal" src="images/puppy_b_small.jpeg" alt="puppy adopter thumbnail">
-          <h3>Puppy Adopter</h3>
-          <p><a href="https://github.com/ryanwc/PuppyAdoption">View on Github</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
-          <img class="img-responsive projectimg" data-toggle="modal" data-target="#coolmodal" src="images/compiler_s_small.png" alt="cool compiler thumbnail">
-          <h3>Cool Compiler</h3>
-          <p><a href="https://github.com/ryanwc/CoolCompiler">View on Github</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
-          <img class="img-responsive projectimg" data-toggle="modal" data-target="#watermodal" src="images/water_s_small.jpg" alt="water finder thumbnail">
-          <h3>Water Finder</h3>
-          <p><a href="#">View on Github</a></p>
-        </div>
-      </div>
-    </div>
-    <!-- Modals (opportunity to pass list of modal info and use for loop when migrate to hosted site)-->
-    <div class="modal fade" id="restaurantmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="">Restaurant Manager</h4>
-          </div>
-          <div class="modal-body">
-            <picture class="img-responsive">
-              <source media="(min-width: 500px)" srcset="images/restaurant_b_large.png">
-              <img src="images/restaurant_s_small.png" alt="screenshot of restaurant manager application user profile">
-            </picture>
-            <p class="text-center"><strong>Summary</strong></p>
-            <p>Restaurant Manager is an interactive website with social signin (Google and Facebook) that helps restaurant staff and owners manage restaurants and their menus.  Users can view, create, edit, and delete cuisines, cuisine "base menu items", restaurants, and restaurant menu items, as well as view other users' profiles.</p>
-            <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written in Python (using Flask) on the backend and HTML/CSS/JavaScript on the frontend, with a SQLite database.  Performs server-side and both real-time and on-submit client-side form validation, uses Flask blueprints to improve modularization, and provides a Python data access object to separate database implementation from server programming.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="stackexchangemodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="">Stack Exchange API and Analysis</h4>
-          </div>
-          <div class="modal-body">
-            <picture class="img-responsive">
-              <source media="(min-width: 500px)" srcset="images/stack_b_large.png">
-              <img src="images/stack_s_small.png" alt="visualization of stack exchange community">
-            </picture>
-            <p class="text-center"><strong>Summary</strong></p>
-            <p>Stack Echange API provides classes and methods to manipulate, analyze, and visualize data from Stack Exchange, the popular expert question-and-answer network.  The project also explores, via multiple regression, what makes a Stack Exchange question "useful" (i.e., receive upvotes) in different communities.</p>
-            <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written in Java.  To get data to use with the application, download a Stack Exchange "data dump" at https://archive.org/details/stackexchange</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="portmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="">Port Scheduler</h4>
-          </div>
-          <div class="modal-body">
-            <picture class="img-responsive">
+      </header>
+
+      <section class="contentseparator">
+        <div class="row topbanner">
+          <div class="col-xs-12" id="topbannercol">
+            <picture class="img-responsive" id="topbannerimg">
               <source media="(min-width: 500px)" srcset="images/port_sMore_large.png">
-              <img src="images/port_sLess_small.png" alt="screenshot of constraint programming code for port scheduler">
+              <img src="images/port_sLess_small.png" alt="picture of code">
             </picture>
-            <p class="text-center"><strong>Summary</strong></p>
-            <p>At seaports, bulk mineral reclaimers stockpile delivered cargo and then reclaim the cargo onto arriving ships.  Port Scheduler is a program that optimizes reclaimer activity subject to nearly real-world constraints (for example, varying schedules of arriving ships with various cargo requirements).</p>
-            <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written in a constraint/logic programming language called MiniZinc.  To run this software, you need MiniZinc 2.0.x and the GECODE 4.4.x solver. Both of these are included in the bundled version of the MiniZinc IDE 0.9.9, which you can find at the MiniZinc website.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="modal fade" id="swisstournamentmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="">Swiss Tournament Manager</h4>
+      </section>
+
+      <section class="maincontent">
+        <div class="row">
+          <div class="col-xs-12"><h2 class="breakheader">Featured Work</h2></div>
+        </div>
+        <div class="row flexrow">
+          <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
+            <img class="img-responsive projectimg" data-toggle="modal" data-target="#restaurantmodal" src="images/restaurant_s_small.png" alt="restaurant manager thumbnail">
+            <h3>Restaurant Manager</h3>
+            <p><a href="https://github.com/ryanwc/RestaurantManager">View on Github</a></p>
           </div>
-          <div class="modal-body">
-            <picture class="img-responsive">
-              <source media="(min-width: 500px)" srcset="images/swiss_b_large.jpg">
-              <img src="images/swiss_b_small.jpg" alt="picture of fencers in a swiss tournament">
-            </picture>
-            <p class="text-center"><strong>Summary</strong></p>
-            <p>Swiss Tournament Manager is a backend system for managing swiss-style tournaments.  The application calculates standings (with tie-breakers), stats, and next-round pairings for any number of distinct tournaments with the same or different players.</p>
-            <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written in Python, with a PostgreSQL database.  Currently, has no frontend.</p>
+          <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
+            <img class="img-responsive projectimg" data-toggle="modal" data-target="#stackexchangemodal" src="images/stack_s_small.png" alt="stack exhange API thumbnail">
+            <h3>Stack Exchange API and Analysis</h3>
+            <p><a href="https://github.com/ryanwc/SocialNetworks">View on Github</a></p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
+            <img class="img-responsive projectimg" data-toggle="modal" data-target="#portmodal" src="images/port_sLess_small.png" alt="port scheduler thumbnail">
+            <h3>Port Scheduler</h3>
+            <p><a href="https://github.com/ryanwc/PortScheduling">View on Github</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
+            <img class="img-responsive projectimg" data-toggle="modal" data-target="#swisstournamentmodal" src="images/swiss_b_small.jpg" alt="swiss tournament manager thumbnail">
+            <!-- Image credit: By © Marie-Lan Nguyen / Wikimedia Commons, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=18757728 -->
+            <h3>Swiss Tournament Manager</h3>
+            <p><a href="https://github.com/ryanwc/SwissTournament">View on Github</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
+            <img class="img-responsive projectimg" data-toggle="modal" data-target="#routemodal" src="images/pathing_s_small.png" alt="routing application thumbnail">
+            <h3>Route Planner</h3>
+            <p><a href="https://github.com/ryanwc/GraphSearch">View on Github</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
+            <img class="img-responsive projectimg" data-toggle="modal" data-target="#digitrecognitionmodal" src="images/network_s.png" alt="neural network thumbnail">
+            <h3>Neural Networks: Digit Recognition</h3>
+            <p><a href="https://github.com/ryanwc/NeuralNetworkDigitRecognition">View on Github</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
+            <img class="img-responsive projectimg" data-toggle="modal" data-target="#puppymodal" src="images/puppy_b_small.jpeg" alt="puppy adopter thumbnail">
+            <!-- Image credit: By Kbwatts - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=36492831 -->
+            <h3>Puppy Adopter</h3>
+            <p><a href="https://github.com/ryanwc/PuppyAdoption">View on Github</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
+            <img class="img-responsive projectimg" data-toggle="modal" data-target="#coolmodal" src="images/compiler_s_small.png" alt="cool compiler thumbnail">
+            <!-- Image credit: By Jochen Burghardt - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=31975496 -->
+            <h3>Cool Compiler</h3>
+            <p><a href="https://github.com/ryanwc/CoolCompiler">View on Github</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
+            <img class="img-responsive projectimg" data-toggle="modal" data-target="#watermodal" src="images/water_s_small.jpg" alt="water finder thumbnail">
+            <h3>Water Finder</h3>
+            <p><a href="#">View on Github</a></p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="modal fade" id="routemodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="">Route Planner</h4>
-          </div>
-          <div class="modal-body">
-            <picture class="img-responsive">
-              <source media="(min-width: 500px)" srcset="images/pathing_b_large.png">
-              <img src="images/pathing_s_small.png" alt="screenshot of route planning application">
-            </picture>
-            <p class="text-center"><strong>Summary</strong></p>
-            <p>Route Planner is a re-creation of Google Maps' path finding capabilities. It can 1) calculate the shortest path in terms of trip duration (or nearly shortest path, if the route is a "Traveling Salesperson Problem") between up to eight locations, and 2) demonstrate the differences between various graph search algorithms.</p>
-            <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written mostly in Java (including the graph data structures and path finding algorithms).  The GUI was built mainly in Java using JavaFX and GMapsFX, with a little HTML, JavaScript, and CSS.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="digitrecognitionmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="">Neural Network Digit Recognition
-          </div>
-          <div class="modal-body">
-            <img class="img-responsive" src="images/network_b.png">
-            <p class="text-center"><strong>Summary</strong></p>
-            <p>Neural Networks: Digit Recognition uses logistic regression and neural networks to classify handwritten digits.  This project was completed for Stanford University's Machine Learning course offered on Coursera.</p>
-            <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written in MATLAB.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </section>
+
+      <section class="modals">
+        <div class="modal fade" id="restaurantmodal" tabindex="-1" role="dialog" aria-labelledby="restaurantmanager" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="restaurantmanager">
+                <h4 class="modal-title">Restaurant Manager</h4>
+              </div>
+              <div class="modal-body">
+                <picture class="img-responsive">
+                  <source media="(min-width: 500px)" srcset="images/restaurant_b_large.png">
+                  <img src="images/restaurant_s_small.png" alt="screenshot of restaurant manager application user profile">
+                </picture>
+                <p class="text-center"><strong>Summary</strong></p>
+                <p>Restaurant Manager is an interactive website with social signin (Google and Facebook) that helps restaurant staff and owners manage restaurants and their menus.  Users can view, create, edit, and delete cuisines, cuisine "base menu items", restaurants, and restaurant menu items, as well as view other users' profiles.</p>
+                <p class="text-center"><strong>Technical Details</strong></p>
+                <p>Written in Python (using Flask) on the backend and HTML/CSS/JavaScript on the frontend, with a SQLite database.  Performs server-side and both real-time and on-submit client-side form validation, uses Flask blueprints to improve modularization, and provides a Python data access object to separate database implementation from server programming.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="modal fade" id="puppymodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="">Puppy Adopter</h4>
-          </div>
-          <div class="modal-body">
-            <picture class="img-responsive">
-              <source media="(min-width: 500px)" srcset="images/puppy_b_large.jpeg">
-              <img src="images/puppy_b_small.jpeg" alt="picture of two cavalier king charles spaniels">
-            </picture>
-            <p class="text-center"><strong>Summary</strong></p>
-            <p>Puppy Adopter is a backend for managing puppy adoptions.  It uses load balancing to transfer new puppies to the least-full shelter (and notifies the user why it made the switch).</p>
-            <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written in Python, with a SQLite database.  Currently, has no frontend.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="coolmodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="">Cool Compiler</h4>
-          </div>
-          <div class="modal-body">
-            <picture class="img-responsive">
-              <source media="(min-width: 500px)" srcset="images/compiler_b_large.png">
-              <img src="images/compiler_s_small.png" alt="screenshot of route planning application">
-            </picture>
-            <p class="text-center"><strong>Summary</strong></p>
-            <p>COOL Compiler is a compiler for the COOL programming language.  This is a work in progress - see Stanford University's online compilers class for more information.</p>
-            <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written in Java.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div class="modal fade" id="stackexchangemodal" tabindex="-1" role="dialog" aria-labelledby="stackexchange" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="stackexchange">
+                <h4 class="modal-title">Stack Exchange API and Analysis</h4>
+              </div>
+              <div class="modal-body">
+                <picture class="img-responsive">
+                  <source media="(min-width: 500px)" srcset="images/stack_b_large.png">
+                  <img src="images/stack_s_small.png" alt="visualization of stack exchange community">
+                </picture>
+                <p class="text-center"><strong>Summary</strong></p>
+                <p>Stack Echange API provides classes and methods to manipulate, analyze, and visualize data from Stack Exchange, the popular expert question-and-answer network.  The project also explores, via multiple regression, what makes a Stack Exchange question "useful" (i.e., receive upvotes) in different communities.</p>
+                <p class="text-center"><strong>Technical Details</strong></p>
+                <p>Written in Java.  To get data to use with the application, download a Stack Exchange "data dump" at https://archive.org/details/stackexchange</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="modal fade" id="watermodal" tabindex="-1" role="dialog" aria-labelledby="projectModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="">Water Finder</h4>
-          </div>
-          <div class="modal-body">
-            <img class="img-responsive" src="images/water_b_large.jpg">
-            <p class="text-center"><strong>Summary</strong></p>
-            <p>Water Finder helps people in Bangkok and Chiang Mai, Thailand locate sources of clean, cheap, environmentally safe drinking water.  This is a work in progress.</p>
-            <p class="text-center"><strong>Technical Details</strong></p>
-            <p>[to come]</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div class="modal fade" id="portmodal" tabindex="-1" role="dialog" aria-labelledby="portscheduler" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="portscheduler">
+                <h4 class="modal-title">Port Scheduler</h4>
+              </div>
+              <div class="modal-body">
+                <picture class="img-responsive">
+                  <source media="(min-width: 500px)" srcset="images/port_sMore_large.png">
+                  <img src="images/port_sLess_small.png" alt="screenshot of constraint programming code for port scheduler">
+                </picture>
+                <p class="text-center"><strong>Summary</strong></p>
+                <p>At seaports, bulk mineral reclaimers stockpile delivered cargo and then reclaim the cargo onto arriving ships.  Port Scheduler is a program that optimizes reclaimer activity subject to nearly real-world constraints (for example, varying schedules of arriving ships with various cargo requirements).</p>
+                <p class="text-center"><strong>Technical Details</strong></p>
+                <p>Written in a constraint/logic programming language called MiniZinc.  To run this software, you need MiniZinc 2.0.x and the GECODE 4.4.x solver. Both of these are included in the bundled version of the MiniZinc IDE 0.9.9, which you can find at the MiniZinc website.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="modal fade" id="swisstournamentmodal" tabindex="-1" role="dialog" aria-labelledby="swisstournament" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="swisstournament">
+                <h4 class="modal-title">Swiss Tournament Manager</h4>
+              </div>
+              <div class="modal-body">
+                <picture class="img-responsive">
+                  <source media="(min-width: 500px)" srcset="images/swiss_b_large.jpg">
+                  <img src="images/swiss_b_small.jpg" alt="picture of fencers in a swiss tournament">
+                  <!-- Image credit: By © Marie-Lan Nguyen / Wikimedia Commons, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=18757728 -->
+                </picture>
+                <p class="text-center"><strong>Summary</strong></p>
+                <p>Swiss Tournament Manager is a backend system for managing swiss-style tournaments.  The application calculates standings (with tie-breakers), stats, and next-round pairings for any number of distinct tournaments with the same or different players.</p>
+                <p class="text-center"><strong>Technical Details</strong></p>
+                <p>Written in Python, with a PostgreSQL database.  Currently, has no frontend.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="routemodal" tabindex="-1" role="dialog" aria-labelledby="routeplanner" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="routeplanner">
+                <h4 class="modal-title">Route Planner</h4>
+              </div>
+              <div class="modal-body">
+                <picture class="img-responsive">
+                  <source media="(min-width: 500px)" srcset="images/pathing_b_large.png">
+                  <img src="images/pathing_s_small.png" alt="screenshot of route planning application">
+                </picture>
+                <p class="text-center"><strong>Summary</strong></p>
+                <p>Route Planner is a re-creation of Google Maps' path finding capabilities. It can 1) calculate the shortest path in terms of trip duration (or nearly shortest path, if the route is a "Traveling Salesperson Problem") between up to eight locations, and 2) demonstrate the differences between various graph search algorithms.</p>
+                <p class="text-center"><strong>Technical Details</strong></p>
+                <p>Written mostly in Java (including the graph data structures and path finding algorithms).  The GUI was built mainly in Java using JavaFX and GMapsFX, with a little HTML, JavaScript, and CSS.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="digitrecognitionmodal" tabindex="-1" role="dialog" aria-labelledby="digitrecognition" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="digitrecognition">
+                <h4 class="modal-title">Neural Network Digit Recognition</h4>
+              </div>
+              <div class="modal-body">
+                <img class="img-responsive" src="images/network_b.png" alt="a visualization of a neural network">
+                <p class="text-center"><strong>Summary</strong></p>
+                <p>Neural Networks: Digit Recognition uses logistic regression and neural networks to classify handwritten digits.  This project was completed for Stanford University's Machine Learning course offered on Coursera.</p>
+                <p class="text-center"><strong>Technical Details</strong></p>
+                <p>Written in MATLAB.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="puppymodal" tabindex="-1" role="dialog" aria-labelledby="puppyadopter" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="puppyadopter">
+                <h4 class="modal-title">Puppy Adopter</h4>
+              </div>
+              <div class="modal-body">
+                <picture class="img-responsive">
+                  <source media="(min-width: 500px)" srcset="images/puppy_b_large.jpeg">
+                  <img src="images/puppy_b_small.jpeg" alt="picture of two cavalier king charles spaniels">
+                  <!-- Image credit: By Kbwatts - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=36492831 -->
+                </picture>
+                <p class="text-center"><strong>Summary</strong></p>
+                <p>Puppy Adopter is a backend for managing puppy adoptions.  It uses load balancing to transfer new puppies to the least-full shelter (and notifies the user why it made the switch).</p>
+                <p class="text-center"><strong>Technical Details</strong></p>
+                <p>Written in Python, with a SQLite database.  Currently, has no frontend.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="coolmodal" tabindex="-1" role="dialog" aria-labelledby="coolcompiler" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="coolcompiler">
+                <h4 class="modal-title">Cool Compiler</h4>
+              </div>
+              <div class="modal-body">
+                <picture class="img-responsive">
+                  <source media="(min-width: 500px)" srcset="images/compiler_b_large.png">
+                  <img src="images/compiler_s_small.png" alt="screenshot of route planning application">
+                  <!-- Image credit: By Jochen Burghardt - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=31975496 -->
+                </picture>
+                <p class="text-center"><strong>Summary</strong></p>
+                <p>COOL Compiler is a compiler for the COOL programming language.  This is a work in progress - see Stanford University's online compilers class for more information.</p>
+                <p class="text-center"><strong>Technical Details</strong></p>
+                <p>Written in Java.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="watermodal" tabindex="-1" role="dialog" aria-labelledby="waterfinder" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" id="waterfinder">
+                <h4 class="modal-title">Water Finder</h4>
+              </div>
+              <div class="modal-body">
+                <img class="img-responsive" src="images/water_b_large.jpg" alt="picture of a reverse osmosis water system in Bangkok">
+                <p class="text-center"><strong>Summary</strong></p>
+                <p>Water Finder helps people in Bangkok and Chiang Mai, Thailand locate sources of clean, cheap, environmentally safe drinking water.  This is a work in progress.</p>
+                <p class="text-center"><strong>Technical Details</strong></p>
+                <p>[to come]</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="row">
+        <div class="col-xs-12">
+          <p>
+            Created by Ryan William Connor in June 2016.
+            <br>
+            Copyright © 2016 Ryan William Connor. All rights reserved.
+          </p>
+        </div>
+      </footer>
+
     </div>
+    <!-- end bootstrap container -->
+
   </body>
 </html>

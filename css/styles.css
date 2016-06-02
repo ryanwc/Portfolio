@@ -34,11 +34,11 @@ img, embed, obj, video {
 	cursor: pointer;
 }
 
-.headerseparator {
+.breakheader {
 	border-bottom: 1px solid;
 }
 
-#topbanner {
+#topbannercol {
 	border-top: 3px solid #404040;
 	padding-top: 8px;
 }
@@ -54,6 +54,46 @@ img, embed, obj, video {
 
 .modalimage {
 	width: 100%;
+}
+
+.triangle {
+	fill: #000000;
+	stroke: #000000;
+	stroke-width: 0;
+	stroke-linejoin: round;
+	stroke-miterlimit: 10;
+}
+
+stop {
+	stop-opacity:1;
+}
+
+#leftgrad {
+	stop-color:rgb(250,0,0);
+}
+
+#middlegrad1 {
+	stop-color:rgb(255,0,255);
+}
+
+#middlegrad2 {
+	stop-color:rgb(255,0,255);
+}
+
+#rightgrad {
+	stop-color:rgb(0,255,255);
+}
+
+ellipse {
+	stroke: #000000;
+	stroke-width: 0;
+	stroke-linejoin: bevel;
+	stroke-miterlimit: 10;
+}
+
+svg text {
+	fill: #ffffff;
+	font-family: "Garamond";
 }
 
 @media screen and (max-width: 450px) {
