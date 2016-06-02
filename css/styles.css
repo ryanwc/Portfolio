@@ -47,6 +47,15 @@ img, embed, obj, video {
 	font-size: 0.8em;
 }
 
+.flexrow {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.modalimage {
+	width: 100%;
+}
+
 @media screen and (max-width: 450px) {
 	.container {
 		font-size: 80%;

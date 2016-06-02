@@ -65,8 +65,6 @@
           <h3>Port Scheduler</h3>
           <p><a href="https://github.com/ryanwc/PortScheduling">View on Github</a></p>
         </div>
-      </div>
-      <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
           <img class="img-responsive projectimg" data-toggle="modal" data-target="#swisstournamentmodal" src="images/swiss_b_small.jpg" alt="swiss tournament manager thumbnail">
           <h3>Swiss Tournament Manager</h3>
@@ -82,8 +80,6 @@
           <h3>Neural Networks: Digit Recognition</h3>
           <p><a href="https://github.com/ryanwc/NeuralNetworkDigitRecognition">View on Github</a></p>
         </div>
-      </div>
-      <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
           <img class="img-responsive projectimg" data-toggle="modal" data-target="#puppymodal" src="images/puppy_b_small.jpeg" alt="puppy adopter thumbnail">
           <h3>Puppy Adopter</h3>
@@ -114,7 +110,7 @@
               <img src="images/restaurant_s_small.png" alt="screenshot of restaurant manager application user profile">
             </picture>
             <p class="text-center"><strong>Summary</strong></p>
-            <p>An interactive website with social signin (Google and Facebook) that helps restaurant staff and owners manage restaurants and their menus.  Users can view, create, edit, and delete cuisines, cuisine "base menu items", restaurants, and restaurant menu items, as well as view other users' profiles.</p>
+            <p>Restaurant Manager is an interactive website with social signin (Google and Facebook) that helps restaurant staff and owners manage restaurants and their menus.  Users can view, create, edit, and delete cuisines, cuisine "base menu items", restaurants, and restaurant menu items, as well as view other users' profiles.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
             <p>Written in Python (using Flask) on the backend and HTML/CSS/JavaScript on the frontend, with a SQLite database.  Performs server-side and both real-time and on-submit client-side form validation, uses Flask blueprints to improve modularization, and provides a Python data access object to separate database implementation from server programming.</p>
           </div>
@@ -136,9 +132,9 @@
               <img src="images/stack_s_small.png" alt="visualization of stack exchange community">
             </picture>
             <p class="text-center"><strong>Summary</strong></p>
-            <p>Stack Echange API and Analysis is a Java library that provides classes and methods to manipulate, analyze, and visualize data from Stack Exchange, an online question and answer network with a variety of distinct communities dedicated to topics ranging from math to music to the workplace to religion.  It also explores, via multiple regression, what makes a Stack Exchange question "useful" (i.e., receive upvotes).</p>
+            <p>Stack Echange API provides classes and methods to manipulate, analyze, and visualize data from Stack Exchange, the popular expert question-and-answer network.  The project also explores, via multiple regression, what makes a Stack Exchange question "useful" (i.e., receive upvotes) in different communities.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written in Java.  You can download the latest Stack Exchange "data dump" at https://archive.org/details/stackexchange</p>
+            <p>Written in Java.  To get data to use with the application, download a Stack Exchange "data dump" at https://archive.org/details/stackexchange</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -158,7 +154,7 @@
               <img src="images/port_sLess_small.png" alt="screenshot of constraint programming code for port scheduler">
             </picture>
             <p class="text-center"><strong>Summary</strong></p>
-            <p>At seaports, bulk mineral cargo reclaimers stockpile delivered goods and then reclaim the goods onto arriving ships.  Port Scheduler is a program that optimizes reclaimer activity subject to nearly real-world constraints (for example, varying schedules of arriving ships with various cargo requirements).</p>
+            <p>At seaports, bulk mineral reclaimers stockpile delivered cargo and then reclaim the cargo onto arriving ships.  Port Scheduler is a program that optimizes reclaimer activity subject to nearly real-world constraints (for example, varying schedules of arriving ships with various cargo requirements).</p>
             <p class="text-center"><strong>Technical Details</strong></p>
             <p>Written in a constraint/logic programming language called MiniZinc.  To run this software, you need MiniZinc 2.0.x and the GECODE 4.4.x solver. Both of these are included in the bundled version of the MiniZinc IDE 0.9.9, which you can find at the MiniZinc website.</p>
           </div>
@@ -180,9 +176,9 @@
               <img src="images/swiss_b_small.jpg" alt="picture of fencers in a swiss tournament">
             </picture>
             <p class="text-center"><strong>Summary</strong></p>
-            <p>Swiss Tournament Manager is a backend system for managing swiss-style tournaments.  The database can store standings and calculate next-round pairings for multiple swiss-style tournaments with even or odd numbers of players, matches that end in ties, and multiple tie-breakers.</p>
+            <p>Swiss Tournament Manager is a backend system for managing swiss-style tournaments.  The application calculates standings (with tie-breakers), stats, and next-round pairings for any number of distinct tournaments with the same or different players.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written in Python, with a PostgreSQL database.  Currently, no frontend.</p>
+            <p>Written in Python, with a PostgreSQL database.  Currently, has no frontend.</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -202,7 +198,7 @@
               <img src="images/pathing_s_small.png" alt="screenshot of route planning application">
             </picture>
             <p class="text-center"><strong>Summary</strong></p>
-            <p>Route Planner is a re-creation of Google Maps' path finding capabilities. It can 1) calculate the shortest path in terms of trip duration (or nearly shortest path, if the path is a "Traveling Salesperson Problem") between up to eight locations, and 2) demonstrate the differences between various graph search algorithms.</p>
+            <p>Route Planner is a re-creation of Google Maps' path finding capabilities. It can 1) calculate the shortest path in terms of trip duration (or nearly shortest path, if the route is a "Traveling Salesperson Problem") between up to eight locations, and 2) demonstrate the differences between various graph search algorithms.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
             <p>Written mostly in Java (including the graph data structures and path finding algorithms).  The GUI was built mainly in Java using JavaFX and GMapsFX, with a little HTML, JavaScript, and CSS.</p>
           </div>
@@ -243,7 +239,7 @@
               <img src="images/puppy_b_small.jpeg" alt="picture of two cavalier king charles spaniels">
             </picture>
             <p class="text-center"><strong>Summary</strong></p>
-            <p>Puppy Adopter is a database that manages puppy adoptions.  Uses load balancing to transfer new puppies to the shelter that is the least full regardless (and notifies the user why it made the switch).</p>
+            <p>Puppy Adopter is a backend for managing puppy adoptions.  It uses load balancing to transfer new puppies to the least-full shelter (and notifies the user why it made the switch).</p>
             <p class="text-center"><strong>Technical Details</strong></p>
             <p>Written in Python, with a SQLite database.  Currently, has no frontend.</p>
           </div>
@@ -265,7 +261,7 @@
               <img src="images/compiler_s_small.png" alt="screenshot of route planning application">
             </picture>
             <p class="text-center"><strong>Summary</strong></p>
-            <p>A work-in-progress compiler for the COOL programming language.  I am building this compiler as part of the Stanford University's online compilers class.</p>
+            <p>COOL Compiler is a compiler for the COOL programming language.  This is a work in progress - see Stanford University's online compilers class for more information.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
             <p>Written in Java.</p>
           </div>
@@ -284,7 +280,7 @@
           <div class="modal-body">
             <img class="img-responsive" src="images/water_b_large.jpg">
             <p class="text-center"><strong>Summary</strong></p>
-            <p>In progress.  Water Finder helps people in Bangkok and Chiang Mai, Thailand locate sources of clean, cheap, environmentally safe drinking water.</p>
+            <p>Water Finder helps people in Bangkok and Chiang Mai, Thailand locate sources of clean, cheap, environmentally safe drinking water.  This is a work in progress.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
             <p>[to come]</p>
           </div>
