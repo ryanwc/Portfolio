@@ -32,64 +32,70 @@
             <text fill="#ffffff" font-size="20" font-family="Garamond" x="36" y="54">rwc</text>
           </svg>
         </div>
-        <div class="col-xs-8 headercol text-uppercase text-right">
-          <h1>Ryan Connor</h1>
-          <p>Software Developer</p>
+        <div class="col-xs-8 headercol text-right">
+          <h1 class="text-uppercase">Ryan Connor</h1>
+          <p class="text-uppercase">Software Developer</p>
+          <span id="sociallinks"><a href="https://www.linkedin.com/in/ryan-connor-4684a62b">LinkedIn profile</a> | <a href="https://github.com/ryanwc">Github account</a> | <a href="mailto:ryanwc13@gmail.com">Email</a></span>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12"><img class="img-responsive" src="images_s_src/port_s.png"></div>
+        <div class="col-xs-12" id="topbanner">
+          <picture class="img-responsive" id="topbannerimg">
+            <source media="(min-width: 500px)" srcset="images/port_sMore_large.png">
+            <img src="images/port_sLess_small.png" alt="picture of code">
+          </picture>
+        </div>
       </div>
       <div class="row">
-        <div class="col-xs-12"><h2>Featured Work</h2></div>
+        <div class="col-xs-12"><h2 class="headerseparator">Featured Work</h2></div>
       </div>
-      <div class="row">
+      <div class="row flexrow">
         <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
-          <img class="img-responsive" data-toggle="modal" data-target="#restaurantmodal" src="images_b_src/restaurant.png">
+          <img class="img-responsive projectimg" data-toggle="modal" data-target="#restaurantmodal" src="images/restaurant_s_small.png" alt="restaurant manager thumbnail">
           <h3>Restaurant Manager</h3>
-          <p><a href="http://github.com">View on Github</a></p>
+          <p><a href="https://github.com/ryanwc/RestaurantManager">View on Github</a></p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
-          <img class="img-responsive" data-toggle="modal" data-target="#stackexchangemodal" src="images_b_src/stack.png">
+          <img class="img-responsive projectimg" data-toggle="modal" data-target="#stackexchangemodal" src="images/stack_s_small.png" alt="stack exhange API thumbnail">
           <h3>Stack Exchange API and Analysis</h3>
           <p><a href="https://github.com/ryanwc/SocialNetworks">View on Github</a></p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
-          <img class="img-responsive" data-toggle="modal" data-target="#portmodal" src="images_b_src/port.png">
+          <img class="img-responsive projectimg" data-toggle="modal" data-target="#portmodal" src="images/port_sLess_small.png" alt="port scheduler thumbnail">
           <h3>Port Scheduler</h3>
           <p><a href="https://github.com/ryanwc/PortScheduling">View on Github</a></p>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
-          <img class="img-responsive" data-toggle="modal" data-target="#swisstournamentmodal" src="images_b_src/swiss.jpg">
+          <img class="img-responsive projectimg" data-toggle="modal" data-target="#swisstournamentmodal" src="images/swiss_b_small.jpg" alt="swiss tournament manager thumbnail">
           <h3>Swiss Tournament Manager</h3>
           <p><a href="https://github.com/ryanwc/SwissTournament">View on Github</a></p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
-          <img class="img-responsive" data-toggle="modal" data-target="#routemodal" src="images_b_src/pathing.png">
+          <img class="img-responsive projectimg" data-toggle="modal" data-target="#routemodal" src="images/pathing_s_small.png" alt="routing application thumbnail">
           <h3>Route Planner</h3>
           <p><a href="https://github.com/ryanwc/GraphSearch">View on Github</a></p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
-          <img class="img-responsive" data-toggle="modal" data-target="#digitrecognitionmodal" src="images_b_src/network.png">
+          <img class="img-responsive projectimg" data-toggle="modal" data-target="#digitrecognitionmodal" src="images/network_s.png" alt="neural network thumbnail">
           <h3>Neural Networks: Digit Recognition</h3>
           <p><a href="https://github.com/ryanwc/NeuralNetworkDigitRecognition">View on Github</a></p>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
-          <img class="img-responsive" data-toggle="modal" data-target="#puppymodal" src="images_b_src/puppy.jpeg">
+          <img class="img-responsive projectimg" data-toggle="modal" data-target="#puppymodal" src="images/puppy_b_small.jpeg" alt="puppy adopter thumbnail">
           <h3>Puppy Adopter</h3>
           <p><a href="https://github.com/ryanwc/PuppyAdoption">View on Github</a></p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 project evenproject">
-          <img class="img-responsive" data-toggle="modal" data-target="#coolmodal" src="images_b_src/compiler.png">
+          <img class="img-responsive projectimg" data-toggle="modal" data-target="#coolmodal" src="images/compiler_s_small.png" alt="cool compiler thumbnail">
           <h3>Cool Compiler</h3>
           <p><a href="https://github.com/ryanwc/CoolCompiler">View on Github</a></p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 project oddproject">
-          <img class="img-responsive" data-toggle="modal" data-target="#watermodal" src="images_b_src/water.jpg">
+          <img class="img-responsive projectimg" data-toggle="modal" data-target="#watermodal" src="images/water_s_small.jpg" alt="water finder thumbnail">
           <h3>Water Finder</h3>
           <p><a href="#">View on Github</a></p>
         </div>
@@ -103,11 +109,14 @@
             <h4 class="modal-title" id="">Restaurant Manager</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images_b_src/restaurant.png">
+            <picture class="img-responsive">
+              <source media="(min-width: 500px)" srcset="images/restaurant_b_large.png">
+              <img src="images/restaurant_s_small.png" alt="screenshot of restaurant manager application user profile">
+            </picture>
             <p class="text-center"><strong>Summary</strong></p>
             <p>An interactive website with social signin (Google and Facebook) that helps restaurant staff and owners manage restaurants and their menus.  Users can view, create, edit, and delete cuisines, cuisine "base menu items", restaurants, and restaurant menu items, as well as view other users' profiles.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
-            <p>Written in Python (using Flask) on the backend and HTML/CSS/JavaScript on the frontend, with a SQLite database.  Performs server-side and both real-time and on-submit client-side form validation, uses Flask blueprints to improve modularization, and provides a wholly-Python data access object to separate database implementation from server programming.</p>
+            <p>Written in Python (using Flask) on the backend and HTML/CSS/JavaScript on the frontend, with a SQLite database.  Performs server-side and both real-time and on-submit client-side form validation, uses Flask blueprints to improve modularization, and provides a Python data access object to separate database implementation from server programming.</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -122,7 +131,10 @@
             <h4 class="modal-title" id="">Stack Exchange API and Analysis</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images_b_src/stack.png">
+            <picture class="img-responsive">
+              <source media="(min-width: 500px)" srcset="images/stack_b_large.png">
+              <img src="images/stack_s_small.png" alt="visualization of stack exchange community">
+            </picture>
             <p class="text-center"><strong>Summary</strong></p>
             <p>Stack Echange API and Analysis is a Java library that provides classes and methods to manipulate, analyze, and visualize data from Stack Exchange, an online question and answer network with a variety of distinct communities dedicated to topics ranging from math to music to the workplace to religion.  It also explores, via multiple regression, what makes a Stack Exchange question "useful" (i.e., receive upvotes).</p>
             <p class="text-center"><strong>Technical Details</strong></p>
@@ -141,9 +153,12 @@
             <h4 class="modal-title" id="">Port Scheduler</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images_b_src/port.png">
+            <picture class="img-responsive">
+              <source media="(min-width: 500px)" srcset="images/port_sMore_large.png">
+              <img src="images/port_sLess_small.png" alt="screenshot of constraint programming code for port scheduler">
+            </picture>
             <p class="text-center"><strong>Summary</strong></p>
-            <p>At seaports, bulk mineral cargo reclaimers stockpile resources deliveries and then reclaim the resources onto arriving ships.  Port Scheduler is a program that optimizes reclaimer activity subject to nearly real-world constraints (for example, varying schedules of arriving ships with various cargo requirements).</p>
+            <p>At seaports, bulk mineral cargo reclaimers stockpile delivered goods and then reclaim the goods onto arriving ships.  Port Scheduler is a program that optimizes reclaimer activity subject to nearly real-world constraints (for example, varying schedules of arriving ships with various cargo requirements).</p>
             <p class="text-center"><strong>Technical Details</strong></p>
             <p>Written in a constraint/logic programming language called MiniZinc.  To run this software, you need MiniZinc 2.0.x and the GECODE 4.4.x solver. Both of these are included in the bundled version of the MiniZinc IDE 0.9.9, which you can find at the MiniZinc website.</p>
           </div>
@@ -160,7 +175,10 @@
             <h4 class="modal-title" id="">Swiss Tournament Manager</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images_b_src/swiss.jpg">
+            <picture class="img-responsive">
+              <source media="(min-width: 500px)" srcset="images/swiss_b_large.jpg">
+              <img src="images/swiss_b_small.jpg" alt="picture of fencers in a swiss tournament">
+            </picture>
             <p class="text-center"><strong>Summary</strong></p>
             <p>Swiss Tournament Manager is a backend system for managing swiss-style tournaments.  The database can store standings and calculate next-round pairings for multiple swiss-style tournaments with even or odd numbers of players, matches that end in ties, and multiple tie-breakers.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
@@ -179,7 +197,10 @@
             <h4 class="modal-title" id="">Route Planner</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images_b_src/pathing.jpg">
+            <picture class="img-responsive">
+              <source media="(min-width: 500px)" srcset="images/pathing_b_large.png">
+              <img src="images/pathing_s_small.png" alt="screenshot of route planning application">
+            </picture>
             <p class="text-center"><strong>Summary</strong></p>
             <p>Route Planner is a re-creation of Google Maps' path finding capabilities. It can 1) calculate the shortest path in terms of trip duration (or nearly shortest path, if the path is a "Traveling Salesperson Problem") between up to eight locations, and 2) demonstrate the differences between various graph search algorithms.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
@@ -198,9 +219,9 @@
             <h4 class="modal-title" id="">Neural Network Digit Recognition
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images_b_src/network.jpg">
+            <img class="img-responsive" src="images/network_b.png">
             <p class="text-center"><strong>Summary</strong></p>
-            <p>Neural Networks: Digit Recognition program written in MATLAB scripts that use logistic regression and neural networks to classify handwritten digits.  This project was completed for Stanford University's Machine Learning course offered on Coursera.</p>
+            <p>Neural Networks: Digit Recognition uses logistic regression and neural networks to classify handwritten digits.  This project was completed for Stanford University's Machine Learning course offered on Coursera.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
             <p>Written in MATLAB.</p>
           </div>
@@ -217,7 +238,10 @@
             <h4 class="modal-title" id="">Puppy Adopter</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images_b_src/puppy.jpeg">
+            <picture class="img-responsive">
+              <source media="(min-width: 500px)" srcset="images/puppy_b_large.jpeg">
+              <img src="images/puppy_b_small.jpeg" alt="picture of two cavalier king charles spaniels">
+            </picture>
             <p class="text-center"><strong>Summary</strong></p>
             <p>Puppy Adopter is a database that manages puppy adoptions.  Uses load balancing to transfer new puppies to the shelter that is the least full regardless (and notifies the user why it made the switch).</p>
             <p class="text-center"><strong>Technical Details</strong></p>
@@ -236,7 +260,10 @@
             <h4 class="modal-title" id="">Cool Compiler</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images_b_src/compiler.jpg">
+            <picture class="img-responsive">
+              <source media="(min-width: 500px)" srcset="images/compiler_b_large.png">
+              <img src="images/compiler_s_small.png" alt="screenshot of route planning application">
+            </picture>
             <p class="text-center"><strong>Summary</strong></p>
             <p>A work-in-progress compiler for the COOL programming language.  I am building this compiler as part of the Stanford University's online compilers class.</p>
             <p class="text-center"><strong>Technical Details</strong></p>
@@ -255,7 +282,7 @@
             <h4 class="modal-title" id="">Water Finder</h4>
           </div>
           <div class="modal-body">
-            <img class="img-responsive" src="images_b_src/water.jpg">
+            <img class="img-responsive" src="images/water_b_large.jpg">
             <p class="text-center"><strong>Summary</strong></p>
             <p>In progress.  Water Finder helps people in Bangkok and Chiang Mai, Thailand locate sources of clean, cheap, environmentally safe drinking water.</p>
             <p class="text-center"><strong>Technical Details</strong></p>

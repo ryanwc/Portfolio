@@ -30,6 +30,23 @@ img, embed, obj, video {
 	background-color: #c0c0c0;
 }
 
+.projectimg {
+	cursor: pointer;
+}
+
+.headerseparator {
+	border-bottom: 1px solid;
+}
+
+#topbanner {
+	border-top: 3px solid #404040;
+	padding-top: 8px;
+}
+
+#sociallinks {
+	font-size: 0.8em;
+}
+
 @media screen and (max-width: 450px) {
 	.container {
 		font-size: 80%;
