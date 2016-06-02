@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/ryanwc/Portfolio/issues"
   },
-  "homepage": "https://github.com/ryanwc/Portfolio#readme"
+  "homepage": "https://github.com/ryanwc/Portfolio#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-responsive-images": "^0.1.7"
+  }
 }
